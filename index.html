@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Zwróć uwagę na atrybut data-lang="title" w elemencie <title> -->
+  <title data-lang="title">Rowery Markowe – Strona główna</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sekcja wyboru języka -->
+  <div class="language-switcher">
+    <button data-setlang="pl">PL</button>
+    <button data-setlang="en">EN</button>
+    <button data-setlang="lt">LT</button>
+  </div>
+
+  <!-- Górny pasek nawigacyjny -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="#">
+          <img src="assets/logo.svg" alt="Rowery Markowe" />
+        </a>
+      </div>
+      <ul class="navbar-menu">
+        <!-- Każdy link ma data-lang z kluczem tłumaczenia -->
+        <li><a href="index.html">Strona główna</a></li>
+        <li><a href="oferta.html">Rowery</a></li>
+        <li><a href="czesci.html">Części</a></li>
+        <li><a href="serwis.html">Serwis</a></li>
+        <li><a href="finansowanie.html">Finansowanie</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sekcja główna (hero) -->
+  <section class="hero">
+    <div class="hero-content">
+      <!-- data-lang="hero-title" = klucz w lang.js -->
+      <h1 data-lang="hero-title">Rowery Markowe</h1>
+      <p data-lang="hero-subtitle">Profesjonalny sklep rowerowy z pasją.</p>
+      <a href="oferta.html" class="btn-cta" data-lang="hero-cta">Sprawdź ofertę</a>
+    </div>
+  </section>
+
+  <!-- Sekcja wprowadzająca (opcjonalna) -->
+  <section class="page-section intro-section">
+    <h2 data-lang="intro-heading">Witaj w Rowery Markowe!</h2>
+    <p data-lang="intro-text">
+      Jesteśmy grupą zapalonych rowerzystów, którzy postanowili stworzyć miejsce idealne dla wszystkich miłośników jednośladów.
+    </p>
+  </section>
+
+  <!-- Stopka -->
+  <footer>
+    <p data-lang="footer">© 2025 Rowery Markowe – Wszelkie prawa zastrzeżone.</p>
+  </footer>
+
+  <!-- Skrypt do obsługi tłumaczeń -->
+  <script src="lang.js"></script>
+</body>
+</html>
+
+

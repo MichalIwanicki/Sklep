@@ -1,0 +1,460 @@
+/* Reset podstawowy */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* --- Nagłówek i nawigacja --- */
+header {
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+}
+
+.navbar-logo img {
+  max-height: 40px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+.navbar-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.navbar-menu li a:hover {
+  opacity: 0.7;
+}
+
+/* --- Sekcja hero (tylko index.html) --- */
+.hero {
+  background: url('img/hero-background.jpg') no-repeat center center/cover;
+  /* Używamy vh, żeby sekcja była proporcjonalna do wysokości ekranu */
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0; 
+  top: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 1em;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+
+.btn-cta {
+  text-decoration: none;
+  background-color: #f00;
+  color: #fff;
+  padding: 0.7em 1.2em;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+  background-color: #b00;
+}
+
+/* --- Sekcje stron --- */
+.page-section {
+  padding: 2em 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-section h2 {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+/* Sekcja intro (na index.html) */
+.intro-section {
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+.intro-section h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.intro-section p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* --- Oferta --- */
+.oferta-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+.oferta-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1em;
+  flex: 1 1 250px;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.oferta-card h3 {
+  margin-bottom: 0.5em;
+}
+
+/* --- Serwis, Finansowanie i inne tekstowe sekcje --- */
+.page-section ul {
+  list-style: disc;
+  margin-left: 2em;
+  line-height: 1.6;
+  margin-top: 1em;
+}
+
+/* --- Kontakt --- */
+.contact-info p {
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  gap: 1em;
+  margin-top: 1em;
+  max-width: 400px; 
+  margin: 0 auto;   
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5em;
+}
+
+.contact-form button {
+  padding: 0.7em;
+  cursor: pointer;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.contact-form button:hover {
+  opacity: 0.8;
+}
+
+/* Sekcja z mapą */
+.map-section {
+  text-align: center;
+}
+
+.map-section iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 450px;
+  border: 0;
+}
+
+/* --- Stopka --- */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+/* =====================================
+   MEDIA QUERIES
+   ===================================== */
+
+/* 1) Ekrany max 768px (tablety i średnie smartfony) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-logo {
+    flex: 1 1 100%;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .navbar-menu {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn-cta {
+    padding: 0.6em 1em;
+  }
+
+  .oferta-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* 2) Ekrany max 480px (telefony) */
+@media (max-width: 480px) {
+  .navbar-menu {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .intro-section p,
+  .page-section p {
+    text-align: left;
+  }
+
+  .contact-form {
+    max-width: 100%;
+    padding: 0 1em;
+  }
+}
+
+/* Sekcja marek */
+.brand-section {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.brand-section p {
+  max-width: 800px;
+  margin: 0.5em auto 2em auto;
+  line-height: 1.5;
+}
+
+.brands-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.brand-item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 0.8em 1em;
+  text-align: center;
+  max-width: 140px; /* lub inna szerokość, w zależności od logo */
+}
+
+.brand-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .brands-container {
+    flex-direction: column;
+  }
+  .brand-item {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+/* języki */
+
+.language-switcher {
+  text-align: right;
+  margin: 0.5em 1em;
+}
+.language-switcher button {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 0.3em 0.6em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.language-switcher button:hover {
+  background: #eee;
+}
+
+
+
+/* Na wąskich ekranach (telefon, tablet) nic nie zmieniamy –
+   sekcje będą jedna pod drugą */
+
+/* Dla szerokości powyżej 992px (lub innej granicy, np. 1024px) */
+@media (min-width: 992px) {
+  .contact-section,
+  .map-section {
+    /* Ustawiamy elementy obok siebie */
+    display: inline-block;
+    width: 49%;       /* Każda zajmuje ~połowę szerokości */
+    vertical-align: top;
+  }
+
+  /* Możesz ustalić np. minimalną wysokość dla formularza lub mapy,
+     albo większą wysokość mapy */
+  .map-section iframe {
+    height: 500px;
+  }
+}
+
+/* Styl dla wiersza danej marki */
+.brand-row {
+  display: flex;          /* ułożenie obok siebie */
+  align-items: flex-start; /* możesz zmienić na center, jeśli wolisz wyrównanie środka */
+  gap: 1.5em;
+  margin-bottom: 2em;      /* odstęp między kolejnymi markami */
+}
+
+/* Kontener na logo */
+.brand-logo {
+  flex: 0 0 120px; /* szerokość logotypu, aby nie rozciągał się */
+  text-align: center;
+}
+
+.brand-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Kontener na opis i zdjęcie */
+.brand-info {
+  flex: 1;
+}
+
+/* Tytuł (nazwa marki) i akapit */
+.brand-info h3 {
+  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+}
+
+.brand-info p {
+  margin-bottom: 1em;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
+/* Opcjonalne zdjęcie roweru */
+.brand-info img {
+  max-width: 400px; /* aby zdjęcie nie było zbyt duże */
+  width: 100%;       /* dopasowuje się do kontenera */
+  height: auto;
+  margin-top: 0.5em;
+  border-radius: 4px; /* lekko zaokrąglone rogi */
+  display: block;
+}
+/* Responsywność: na mniejszych ekranach stosujemy układ pionowy */
+@media (max-width: 768px) {
+  .brand-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .brand-logo {
+    flex: none;
+    
+  }
+
+  .brand-info {
+    margin-top: 1em;
+  }
+
+  .brand-info img {
+    max-width: 100%;
+  }
+}
+
+/* Logo marki w roli tytułu */
+.brand-title-logo {
+  display: block;       /* by logo było w osobnej linii */
+  max-width: 200px;     /* ogranicz szerokość - dopasuj wedle uznania */
+  margin-bottom: 1em;   /* odstęp poniżej logo */
+  display: block;       /* obrazek jest blokowy */
+  margin: 0 auto;       /* auto z lewej i prawej wyśrodkuje go */
+}
+
+/* Kontener na dwa zdjęcia rowerów obok siebie */
+.bike-photos {
+  display: flex;        /* ustawia zdjęcia w wierszu */
+  gap: 1em;             /* odstęp między obrazkami */
+  flex-wrap: wrap;      /* jeśli zabraknie miejsca, przechodzą do nowej linii */
+  margin-top: 1em;
+}
+
+.bike-photos img {
+  max-width: 48%;       /* dwa obrazki obok siebie, 48% + 48% plus odstęp */
+  height: auto;
+  border-radius: 4px;   /* lekko zaokrąglone rogi, jeśli chcesz */
+}
+
+/* Możesz użyć media queries, by na małych ekranach zdjęcia przechodziły 
+   jedno pod drugim, jeśli tak wolisz. Przykład: */
+@media (max-width: 600px) {
+  .bike-photos img {
+    max-width: 100%;    /* na telefonach każdy obrazek w osobnym wierszu */
+    margin-bottom: 1em;
+  }
+}
