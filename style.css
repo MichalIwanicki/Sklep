@@ -12,6 +12,12 @@ header {
   color: #fff;
 }
 
+header {
+  position: sticky;
+  top: 0;        /* Punkt, w którym element ma się przyklejać */
+  z-index: 9999; /* by uniknąć przykrycia przez inne elementy */
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -77,6 +83,18 @@ header {
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 1em;
+}
+
+/* Lista z godzinami otwarcia w hero */
+.hero-opening-hours {
+  margin-top: 1.5em;    /* odstęp od przycisku */
+  text-align: center; /* wyśrodkuj tekst (jeśli chcesz) */
+  list-style: none;   /* usuń kropki listy, jeżeli wolisz */
+  padding: 0;         /* żeby nie było domyślnego wcięcia */
+}
+
+.hero-opening-hours li {
+  margin-bottom: 0.7em; /* odstęp między liniami */
 }
 
 .btn-cta {
@@ -150,6 +168,7 @@ header {
   margin-left: 2em;
   line-height: 1.6;
   margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 /* --- Kontakt --- */
@@ -325,6 +344,9 @@ footer {
 .language-switcher {
   text-align: right;
   margin: 0.5em 1em;
+  position: sticky;
+  top: 0;        /* Punkt, w którym element ma się przyklejać */
+  z-index: 9999; /* by uniknąć przykrycia przez inne elementy */
 }
 .language-switcher button {
   background: none;
@@ -458,3 +480,12 @@ footer {
     margin-bottom: 1em;
   }
 }
+
+.parts-assortment{
+  margin-top: 1cm;
+}
+
+.parts-assortment-heading{
+  margin-top: 3cm;
+}
+

@@ -6,6 +6,12 @@
   <title>Rowery Markowe – Rowery</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+  <!-- Sekcja wyboru języka -->
+  <div class="language-switcher">
+    <button data-setlang="pl">PL</button>
+    <button data-setlang="en">EN</button>
+    <button data-setlang="lt">LT</button>
+  </div>
 <body>
   <!-- Górny pasek nawigacyjny -->
   <header>
@@ -16,12 +22,12 @@
         </a>
       </div>
       <ul class="navbar-menu">
-        <li><a href="index.html">Strona główna</a></li>
-        <li><a href="oferta.html">Rowery</a></li>
-        <li><a href="czesci.html">Części</a></li>
-        <li><a href="serwis.html">Serwis</a></li>
-        <li><a href="finansowanie.html">Finansowanie</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="index.html" data-lang="nav-home">Strona główna</a></li>
+        <li><a href="oferta.html" data-lang="nav-rowey">Rowery</a></li>
+        <li><a href="czesci.html" data-lang="nav-czesci">Części</a></li>
+        <li><a href="serwis.html" data-lang="nav-serwis">Serwis</a></li>
+        <li><a href="finansowanie.html" data-lang="nav-finansowanie">Raty i promocje</a></li>
+        <li><a href="kontakt.html" data-lang="nav-kontakt">Kontakt</a></li>
       </ul>
     </nav>
   </header>
@@ -30,119 +36,176 @@
   <section class="page-section brand-section">
 
     <!-- Trek -->
-  <div class="brand-row">
-    <div class="brand-info">
-      <img src="assets/trek-logo.png" alt="Trek" class="brand-title-logo" />
+    <div class="brand-row">
+      <div class="brand-info">
+        <img src="assets/trek-logo.png" alt="Trek" class="brand-title-logo" />
 
-      <p>
-        Trek to jeden z najbardziej rozpoznawalnych producentów rowerów na świecie.
-        Specjalizuje się w rowerach górskich, szosowych i rowerach do jazdy
-        rekreacyjnej, stawiając na innowacje i wysoką jakość.
-      </p>
+        <p data-lang="trek">
+          Trek to jeden z najbardziej rozpoznawalnych producentów rowerów na świecie.
+          Specjalizuje się w rowerach górskich, szosowych i rowerach do jazdy
+          rekreacyjnej, stawiając na innowacje i wysoką jakość. W naszym sklepie dostępne są modele z serii: Marlin,
+          Xcaliber, Procaliber oraz Fulex.
+        </p>
 
-      <!-- ZAMIAST jednego zdjęcia -> DWA zdjęcia obok siebie -->
-      <div class="bike-photos">
-        <img src="assets/trek-bike1.png" alt="Przykładowy rower Trek 1" />
-        <img src="assets/trek-bike2.png" alt="Przykładowy rower Trek 2" />
+        <!-- ZAMIAST jednego zdjęcia -> DWA zdjęcia obok siebie -->
+        <div class="bike-photos">
+          <img src="assets/trek-bike1.png" alt="Przykładowy rower Trek 1" />
+          <img src="assets/trek-bike2.png" alt="Przykładowy rower Trek 2" />
+        </div>
       </div>
     </div>
-  </div>
-
-  <!-- Storm -->
-  <div class="brand-row">
-    <div class="brand-info">
-      <img src="assets/storm-logo.png" alt="Storm" class="brand-title-logo" />
-      <p>
-        Marka Storm słynie z wytrzymałych rowerów górskich oraz rowerów miejskich.
-        Idealna propozycja dla osób, które cenią sobie dobrą jakość w przystępnej cenie.
-      </p>
-      <div class="bike-photos">
-        <img src="assets/storm-bike1.jpg" alt="Rower Storm 1" />
-        <img src="assets/storm-bike2.jpg" alt="Rower Storm 2" />
-      </div>
-    </div>
-  </div>
 
     <!-- Kross -->
     <div class="brand-row">
-      <div class="brand-logo">
-        <img src="assets/kross-logo.png" alt="Kross" />
-      </div>
       <div class="brand-info">
-        <h3>Kross</h3>
-        <p>
+        <img src="assets/kross-logo.png" alt="Kross" class="brand-title-logo" />
+
+        <p data-lang="kross">
           Polski producent rowerów o dużym doświadczeniu w tworzeniu rowerów MTB,
-          trekkingowych i miejskich. Oferuje szeroką gamę modeli w różnych przedziałach cenowych.
+          trekkingowych i miejskich. Oferuje szeroką gamę modeli w różnych przedziałach cenowych. 
+          W naszym sklepie dostępne są modele z serii: Hexagon, Lea, Trans, Racer, Mini oraz Esker w różnych rozmiarach.
         </p>
-        <img src="assets/kross-bike.jpg" alt="Przykładowy rower Kross" />
+
+        <div class="bike-photos">
+          <img src="assets/kross-bike1.png" alt="Przykładowy rower Kross 1" />
+          <img src="assets/kross-bike2.png" alt="Przykładowy rower Kross 2" />
+        </div>
       </div>
     </div>
 
     <!-- Merida -->
     <div class="brand-row">
-      <div class="brand-logo">
-        <img src="assets/merida-logo.png" alt="Merida" />
-      </div>
       <div class="brand-info">
-        <h3>Merida</h3>
-        <p>
+        <img src="assets/merida-logo.png" alt="Merida" class="brand-title-logo" />
+      
+        <p data-lang="merida">
           Merida to tajwański producent rowerów z wieloletnią tradycją, słynący
-          z innowacyjnych rozwiązań i lekkich ram. Często wybierana przez zawodowców.
+          z innowacyjnych rozwiązań i lekkich ram. Często wybierana przez zawodowców. W naszym sklepie
+          dostępne są modele z serii: Bignine, Freeway oraz Crossway w różnych rozmiarach.
         </p>
-        <img src="assets/merida-bike.jpg" alt="Przykładowy rower Merida" />
+
+        <div class="bike-photos">
+          <img src="assets/merida-bike1.png" alt="Przykładowy rower merida 1" />
+          <img src="assets/merida-bike2.png" alt="Przykładowy rower merida 2" />
+        </div>
+
       </div>
     </div>
 
     <!-- Giant -->
     <div class="brand-row">
-      <div class="brand-logo">
-        <img src="assets/giant-logo.png" alt="Giant" />
-      </div>
       <div class="brand-info">
-        <h3>Giant</h3>
-        <p>
+        <img src="assets/giant-logo.png" alt="Giant" class="brand-title-logo"/>
+      
+        <p data-lang="giant">
           Giant jest jednym z największych producentów rowerów na świecie. Oferuje
           zarówno modele klasyczne, jak i elektryczne, stawiając na nowoczesne rozwiązania technologiczne.
+          W naszym sklepie dostępne są modele z serii: Talon, Roam, Attend oraz ich damskie odpowiedniki z damskiej
+          marki Live.
         </p>
-        <img src="assets/giant-bike.jpg" alt="Przykładowy rower Giant" />
+
+        <div class="bike-photos">
+          <img src="assets/giant-bike1.png" alt="Przykładowy rower giant 1" />
+          <img src="assets/giant-bike2.png" alt="Przykładowy rower giant 2" />
+        </div>
+
       </div>
     </div>
 
     <!-- Onilus -->
     <div class="brand-row">
-      <div class="brand-logo">
-        <img src="assets/onilus-logo.png" alt="Onilus" />
-      </div>
       <div class="brand-info">
-        <h3>Onilus</h3>
-        <p>
+        <img src="assets/onilus-logo.png" alt="Onilus" class="brand-title-logo"/>
+      
+        <p data-lang="onilus">
           Onilus to marka specjalizująca się w rowerach miejskich i trekkingowych,
-          z naciskiem na komfort i nowoczesny design.
+          z naciskiem na komfort i nowoczesny design. W naszym sklepie dostępne są modele z serii: Muranus oraz Naila,
+          a także dziecięce modele Riper oraz Kati.
         </p>
-        <img src="assets/onilus-bike.jpg" alt="Przykładowy rower Onilus" />
+
+        <div class="bike-photos">
+          <img src="assets/onilus-bike1.png" alt="Przykładowy rower onilus 1" />
+          <img src="assets/onilus-bike2.png" alt="Przykładowy rower onilus 2" />
+        </div>
       </div>
     </div>
 
     <!-- Tabou -->
     <div class="brand-row">
-      <div class="brand-logo">
-        <img src="assets/tabou-logo.png" alt="Tabou" />
-      </div>
       <div class="brand-info">
-        <h3>Tabou</h3>
-        <p>
+        <img src="assets/tabou-logo.png" alt="Tabou" class="brand-title-logo"/>
+      
+        <p data-lang="tabou">
           Tabou to stosunkowo młoda marka, która stawia na stylowe rowery
           miejskie i crossowe. Idealne dla osób szukających nietuzinkowych rozwiązań.
+          W naszym sklepie dostępne są modele z serii: Kinetic, Flow, Blade oraz Rocket.
         </p>
-        <img src="assets/tabou-bike.jpg" alt="Przykładowy rower Tabou" />
+        
+        <div class="bike-photos">
+          <img src="assets/tabou-bike1.png" alt="Przykładowy rower tabou 1" />
+          <img src="assets/tabou-bike2.png" alt="Przykładowy rower tabou 2" />
+        </div>
       </div>
     </div>
+
+  <!-- Storm -->
+  <div class="brand-row">
+    <div class="brand-info">
+      <img src="assets/storm-logo.png" alt="Storm" class="brand-title-logo" />
+      <p data-lang="storm">
+        Marka Storm słynie z wytrzymałych rowerów górskich oraz rowerów miejskich.
+        Idealna propozycja dla osób, które cenią sobie dobrą jakość w przystępnej cenie.
+        W naszym sklepie dostępne są modele z serii: Shark, Trail, Marathon, Racer, Rocket, Lassie, Paris, Amsterdam oraz Barcelona.
+      </p>
+      <div class="bike-photos">
+        <img src="assets/storm-bike1.png" alt="Rower Storm 1" />
+        <img src="assets/storm-bike2.png" alt="Rower Storm 2" />
+      </div>
+    </div>
+  </div>
+
+    <!-- Barton -->
+      <div class="brand-row">
+        <div class="brand-info">
+          <img src="assets/barton-logo.png" alt="Barton" class="brand-title-logo" />
+          <p data-lang="barton">
+            Marka Storm słynie z wytrzymałych rowerów górskich oraz rowerów miejskich.
+            Idealna propozycja dla osób, które cenią sobie dobrą jakość w przystępnej cenie.
+            W naszym sklepie dostępne są modele z serii: Shark, Trail, Marathon, Racer, Rocket, Lassie, Paris, Amsterdam oraz Barcelona.
+          </p>
+          <div class="bike-photos">
+            <img src="assets/barton-bike1.png" alt="Rower Barton 1" />
+            <img src="assets/barton-bike2.png" alt="Rower Barton 2" />
+          </div>
+        </div>
+      </div>
+
+    <!-- Ecobike -->
+    <div class="brand-row">
+      <div class="brand-info">
+        <img src="assets/ecobike-logo.png" alt="Ecobike" class="brand-title-logo" />
+        <p data-lang="ecobike">
+          Marka Storm słynie z wytrzymałych rowerów górskich oraz rowerów miejskich.
+          Idealna propozycja dla osób, które cenią sobie dobrą jakość w przystępnej cenie.
+          W naszym sklepie dostępne są modele z serii: Shark, Trail, Marathon, Racer, Rocket, Lassie, Paris, Amsterdam oraz Barcelona.
+        </p>
+        <div class="bike-photos">
+          <img src="assets/ecobike-bike1.png" alt="Rower Ecobike 1" />
+          <img src="assets/ecobike-bike2.png" alt="Rower Ecobike 2" />
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- Stopka -->
   <footer>
     <p>© 2025 Rowery Markowe – Wszelkie prawa zastrzeżone.</p>
   </footer>
+
+    <!-- Skrypt do obsługi tłumaczeń -->
+    <script src="lang.js"></script>
+
 </body>
 </html>
 
