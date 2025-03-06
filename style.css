@@ -489,43 +489,4 @@ footer {
   margin-top: 3cm;
 }
 
-/* Kontener opakowujący listę asortymentu oraz zdjęcia */
-.parts-content {
-  display: flex;
-  align-items: flex-start;
-  gap: 2em;
-  flex-wrap: wrap;
-}
 
-/* Stylizacja listy asortymentu */
-.parts-assortment {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex: 1 1 300px;
-}
-
-/* Kontener na zdjęcia części – ustawiony jako flexbox */
-.parts-image {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  justify-content: center;
-  flex: 1 1 800px;
-}
-
-/* Stylizacja poszczególnych zdjęć */
-.parts-image img {
-  flex: 1 1 calc(50% - 1em);  /* dwa zdjęcia w rzędzie; zmień na calc(25% - 1em) dla czterech w jednym rzędzie */
-  max-width: 48%;            /* dostosuj, by zachować odstępy */
-  height: auto;
-  border-radius: 4px;
-}
-
-/* Dla mniejszych ekranów – zdjęcia ustawiają się jedno pod drugim */
-@media (max-width: 600px) {
-  .parts-image img {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
